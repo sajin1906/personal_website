@@ -10,7 +10,7 @@ function App() {
     // Nav bar styling 
     <div style={{width: '100%'}}>
       <nav style={{
-        width: '100vw',
+        width: '100%',
         background: '#393C3D',
         color: '#fff',
         padding: '1.5rem 1.5rem',
@@ -41,10 +41,10 @@ function App() {
       {/*HOME SECTION*/}
 
       {/*Divsion of text and picture*/}
-      <div style={{ padding: '20px', backgroundColor: '#f8f9fa', minHeight: '100vh', minWidth: '100%' }}>
+      <div style={{ padding: '20px', backgroundColor: '#f8f9fa', minHeight: '100vh'}}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div style={{ flex: 1}}>
-            <h1 style={{ fontWeight: 450, fontSize: '3Rem', color: '#333', textAlign: 'center', marginLeft: '450px' }}> Welcome! வணக்கம்!</h1>
+            <h1 style={{ fontWeight: 450, fontSize: '3Rem', color: '#333', textAlign: 'center', marginLeft: '40boo0px'}}> Welcome! வணக்கம்!</h1>
             <h1 style = {{ fontWeight: 400, paddingLeft: '80px',paddingTop: '10px', fontSize: '2.5rem', color: '#000000', textAlign: 'left'}}> Who am I? </h1>
             <Message/>
           </div>
@@ -75,7 +75,7 @@ function App() {
         </div>
       </div>
       {/*ABOUT ME SECTION*/}
-      <div style={{padding: '10px', backgroundColor: '#D3D3D3', minHeight: '50vh', minWidth: '100vw' }}>
+      <div style={{padding: '10px', backgroundColor: '#D3D3D3', minHeight: '50vh'}}>
       <h1 style={{fontSize: '3.5Rem', textAlign:'center', color: '#000000', fontWeight:'250'}}>
         Hobbies
       </h1>
