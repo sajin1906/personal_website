@@ -10,12 +10,12 @@ function App() {
     // Nav bar styling 
     <div style={{width: '100%'}}>
       <nav style={{
-        width: '100%',
+        width: '100vw',
         background: '#393C3D',
         color: '#fff',
         padding: '1.5rem 1.5rem',
         display: 'flex',
-        gap: '1.5rem',
+        gap: '1.0rem',
         alignItems: 'center'
       }}> 
         {/*Nav bar styling*/}
