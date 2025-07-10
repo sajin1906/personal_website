@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f8f9fa;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -67,4 +67,22 @@ html, body {
   overflow-x: hidden; /* Hides any accidental overflow */
   margin: 0;
   padding: 0;
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, rgb(254, 191, 191), rgb(244, 221, 247), rgb(236, 253, 218), rgb(196, 197, 255));
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
