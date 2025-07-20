@@ -4,22 +4,27 @@ import Logo from './assets/bat.png'
 import Basketball from './assets/basketball.jpg'
 import Coding from './assets/coding.jpg'
 import Dance from './assets/dance.jpg'
-import Phone from './assets/phone.jpg'
 import Star from './assets/star.jpg'
 import Running from './assets/running.jpg'
+import Github from './assets/github.jpg'
+import Linkedin from './assets/linkedin.jpg'
+import './index.css'
 
 function App() {
   return (
     // Nav bar styling 
     <div style={{width: '100%'}}>
       <nav style={{
+        background: 'transparent',
         width: '100%',
-        background: '#393C3D',
+        position: 'fixed',
         color: '#fff',
         padding: '1.5rem 1.5rem',
         display: 'flex',
         gap: '1.5rem',
-        alignItems: 'center'
+        alignItems: 'center',
+        top: 0,
+        zIndex: 1000,
       }}> 
         {/*Nav bar styling*/}
         <img
@@ -31,16 +36,43 @@ function App() {
             borderRadius: '25px'
           }}
         />
-        <span style={{ fontWeight: '400', fontSize: '1.2rem' }}>SAJIN</span>
+        <span style={{ fontWeight: '500', fontSize: '1.2rem', color:'#000000'}}>SAJIN</span>
 
-        <a href="https://google.com"> < button type="button" className="btn btn-dark">About Me</button></a>
-        <a href="https://google.com"> < button type="button" className="btn btn-dark">Hobbies</button></a>
-        <a href=" #"> < button type="button" className="btn btn-dark">Contact</button></a>
+        <button
+        onClick={() => {
+        const section = document.getElementById('About Me');
+        if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        }
+        }}
+        >About Me</button>
+        
+        <button
+        onClick={() => {
+        const section = document.getElementById('hobbies');
+        if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        }
+        }}
+        >
+        Hobbies
+        </button>
+        <button 
+        onClick={() => {
+        const section = document.getElementById('Contact')
+        if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        }
+        }}
+        >
+        Contact
+        </button>
+
       
 
       </nav>
-      <div>
-        <h1 style={{ fontWeight: 400, fontSize: '3Rem', color: '#333', textAlign: 'center'}}> Welcome,  வணக்கம்!</h1>
+      <div id="About Me">
+        <h1 style={{ paddingTop: '80px', fontWeight: 400, fontSize: '3Rem', color: '#333', textAlign: 'center'}}> Welcome,  வணக்கம்!</h1>
       </div>
 
 
@@ -86,8 +118,8 @@ function App() {
 
       {/*HOBBIES SECTION*/}
       <hr style={{border: '2px solid #000000', margin: '0'}} />
-      <div className='animated-gradient' style={{paddingTop: '20px', paddingBottom: '50px' }}>
-        <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', paddingTop: '2rem'}}>
+      <div id="hobbies" className='animated-gradient' style={{paddingTop: '20px', paddingBottom: '50px' }}>
+        <div  style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', paddingTop: '2rem'}}>
           <img src={Running} alt="Running" style={{width: '70px', height: '70px', marginBottom: '60px', rotate: '25deg'}} />
           <h1 style={{fontSize: '3.5rem', textAlign:'center', color: '#000000', fontWeight: 490, marginBottom: '60px', marginTop: 0}}>
             Hobbies.
@@ -97,7 +129,7 @@ function App() {
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '6rem' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={Basketball} alt="Basketball" style={{ width: '380px', height: '350px', borderRadius: '20px' }} />
+            <img src={Basketball} alt="Basketball" style={{ width: '400px', height: '350px', borderRadius: '20px' }} />
             <h1 style={{ fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
               <span style={{ borderBottom: '4px solid #000', fontWeight: 200 }}>
                 Basketball
@@ -105,7 +137,7 @@ function App() {
             </h1>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={Coding} alt="Coding" style={{ width: '380px', height: '350px', borderRadius: '20px' }} />
+            <img src={Coding} alt="Coding" style={{ width: '400px', height: '350px', borderRadius: '20px' }} />
             <h1 style={{ fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
               <span style={{ borderBottom: '4px solid #000', fontWeight: 200 }}>
                 Coding
@@ -113,7 +145,7 @@ function App() {
             </h1>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={Dance} alt="Dance" style={{ width: '390px', height: '350px', borderRadius: '20px' }} />
+            <img src={Dance} alt="Dance" style={{ width: '400px', height: '350px', borderRadius: '20px' }} />
             <h1 style={{ fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
               <span style={{ borderBottom: '4px solid #000', fontWeight: 200 }}>
                 Dance
@@ -124,14 +156,20 @@ function App() {
       </div>
       {/* Contact Me section below the Hobbies section */}
       <hr style={{border: '1px solid #000000', margin: '0'}} />
-      <div style={{paddingTop: '20px', backgroundColor: '#5D5962'}}>
-        <div style={{ display: 'flex',flexDirection: 'row', gap: '3rem', paddingTop: '20px', backgroundColor: '#5D5962'}}>
-          <h1 style={{fontSize: '3rem', textAlign:'left', color: '#FAFAFA', fontWeight: 200, paddingTop: '20px', paddingLeft: '60px'}}>Contact Me</h1>
-          <img src={Phone} alt="Phone" style={{width: '50px', height: '50px', paddingTop: '55px', rotate: '23deg'}} />
-        </div>
+      <div style={{ paddingTop: '5px',backgroundColor: '#5D5962'}}>
+          <h1 style={{fontSize: '3rem', textAlign:'left', color: '#FAFAFA', fontWeight: 300, paddingTop: '20px', paddingLeft: '60px'}}>Contact Me</h1>
       <h3 style={{fontSize: '1.5rem', textAlign:'left', color: '#FAFAFA', fontWeight: 200, paddingLeft: '60px'}}> You can use any of these socials to reach me.  If you wanna coollabrate, inquire or just simply chat, I am open to talk! </h3>
-        <div style={{ display: 'flex',flexDirection: 'row', gap: '1rem', paddingTop: '20px', backgroundColor: '#5D5962'}}>
-        </div>
+      <div id ="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', paddingTop: '20px', backgroundColor: '#5D5962'}}>
+          <a href="https://github.com/sajin1906"> <h3 style={{fontSize: '1.5rem', textAlign:'center', color: '#FAFAFA', fontWeight: 200, display: 'flex', alignItems: 'center', gap: '5px'}}>
+            <img src={Github} alt="Github" style={{ width: '30px', height: '30px', marginRight: '10px', marginTop: '10px' }} /> 
+            Follow on Github    
+          </h3></a>
+          <a href="https://www.linkedin.com/in/sajin-somaskanthan-804089334/"> <h3 style={{fontSize: '1.5rem', textAlign:'center', color: '#FAFAFA', fontWeight: 200, display: 'flex', alignItems: 'center', gap: '5px'}}>
+            <img src={Linkedin} alt="Linkedin" style={{ width: '30px', height: '30px', marginRight: '10px', marginTop: '10px' }} /> 
+            Follow on LinkedIn
+          </h3></a>
+      </div>
+        
       </div>
   </div>
 

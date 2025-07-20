@@ -24,6 +24,10 @@ a:hover {
 
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -36,7 +40,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #222222;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -70,7 +74,7 @@ html, body {
 }
 
 .animated-gradient {
-  background: linear-gradient(-45deg, rgb(254, 191, 191), rgb(244, 221, 247), rgb(236, 253, 218), rgb(196, 197, 255));
+  background: linear-gradient(-45deg, rgb(254, 191, 191), rgb(246, 174, 255), rgb(205, 255, 151), rgb(136, 138, 253));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
 }
@@ -84,5 +88,5 @@ html, body {
   }
   100% {
     background-position: 0% 50%;
-  }
+  }0
 }
