@@ -9,6 +9,9 @@ import Running from './assets/running.jpg'
 import Github from './assets/github.jpg'
 import Linkedin from './assets/linkedin.jpg'
 import './index.css'
+import Kid from './assets/kid.jpeg'
+
+
 
 function App() {
   return (
@@ -36,7 +39,7 @@ function App() {
             borderRadius: '25px'
           }}
         />
-        <span style={{ fontWeight: '500', fontSize: '1.2rem', color:'#000000'}}>SAJIN</span>
+        <span style={{ fontWeight: '800', fontSize: '1.3rem', color:'#000000', textShadow: '1px 2px 8px rgba(0,0,0,0.25)' }}>SAJIN</span>
 
         <button
         onClick={() => {
@@ -59,14 +62,25 @@ function App() {
         </button>
         <button 
         onClick={() => {
-        const section = document.getElementById('Contact')
+        const section = document.getElementById('Aspirations')
         if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
         }
         }}
         >
+        Goals
+
+        </button>
+        <button
+        onClick={() => {
+        const section = document.getElementById('Contact')
+        if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        }
+        }}>
         Contact
         </button>
+        
 
       
 
@@ -105,7 +119,7 @@ function App() {
 
         </div>
       </div>
-        <div style={{padding: '30px', marginTop: '5rem',backgroundColor:'#AAA7AD', borderRadius: '20px' }}>
+        <div style={{padding: '30px', marginTop: '9rem',backgroundColor:'#AAA7AD', borderRadius: '20px' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 190, color: '#2A0000', textAlign: 'center' }}>
             "It's nice to be important, but it's more important to be nice. "
           </h1>
@@ -117,55 +131,93 @@ function App() {
 
 
       {/*HOBBIES SECTION*/}
+
       <hr style={{border: '2px solid #000000', margin: '0'}} />
-      <div id="hobbies" className='animated-gradient' style={{paddingTop: '20px', paddingBottom: '50px' }}>
+      <div className='animated-gradient' style={{ paddingBottom: '50px' }}>
         <div  style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', paddingTop: '2rem'}}>
           <img src={Running} alt="Running" style={{width: '70px', height: '70px', marginBottom: '60px', rotate: '25deg'}} />
-          <h1 style={{fontSize: '3.5rem', textAlign:'center', color: '#000000', fontWeight: 490, marginBottom: '60px', marginTop: 0}}>
-            Hobbies.
+          <h1 id="hobbies" style={{fontSize: '3.5rem', textAlign:'center', color: '#000000', fontWeight: 490, marginBottom: '60px', marginTop: 0}}>
+            Hobbies
           </h1>
           <img src={Star} alt="Star" style={{width: '90px', height: '90px', marginBottom: '60px', rotate: '-25deg'}} />
           
         </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', gap: '6rem' }}>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={Basketball} alt="Basketball" style={{ width: '400px', height: '350px', borderRadius: '20px' }} />
-            <h1 style={{ fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
-              <span style={{ borderBottom: '4px solid #000', fontWeight: 200 }}>
+            <img src={Basketball} alt="Basketball" style={{ boxShadow:'0 4px 16px rgba(0,0,0,0.15)', width: '400px', height: '350px', borderRadius: '20px' }} />
+            <h1 style={{fontWeight: 450, fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
                 Basketball
-              </span>
+              
             </h1>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={Coding} alt="Coding" style={{ width: '400px', height: '350px', borderRadius: '20px' }} />
-            <h1 style={{ fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
-              <span style={{ borderBottom: '4px solid #000', fontWeight: 200 }}>
+            <img src={Coding} alt="Coding" style={{boxShadow:'0 4px 16px rgba(0,0,0,0.15)', width: '400px', height: '350px', borderRadius: '20px' }} />
+            <h1 style={{fontWeight: 450, fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
                 Coding
-              </span>
             </h1>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <img src={Dance} alt="Dance" style={{ width: '400px', height: '350px', borderRadius: '20px' }} />
-            <h1 style={{ fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
-              <span style={{ borderBottom: '4px solid #000', fontWeight: 200 }}>
+            <img src={Dance} alt="Dance" style={{boxShadow:'0 4px 16px rgba(0,0,0,0.15)', width: '400px', height: '350px', borderRadius: '20px' }} />
+            <h1 style={{fontWeight: 450,fontSize: '2.5rem', margin: 0, color: '#000000', paddingTop: '15px' }}>
                 Dance
-              </span>
-            </h1>
+            </h1> 
           </div>
         </div>
       </div>
+      <hr id="Aspirations" style={{border: '2px solid #000000', margin: '0'}} />
+
+      {/* FUTURE ASPIRATIONS SECTION (Flip Card) */}
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', margin: '5.5rem', paddingBottom: '40px' }}>
+        <div className="flip-card" style={{ flex: '0 0 300px' }}>
+          <div className="flip-card-inner">
+            <div className="flip-card-front"
+              style={{
+                backgroundImage: `url(${Kid})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'left',
+                borderRadius: '10px',
+                width: '100%',
+                height: '100%',
+              }}
+            >
+            </div>
+            <div className="flip-card-back">
+              <h2>Strengths</h2>
+              <ul style={{ textAlign: 'left' }}>
+                <li>Leadership</li>
+                <li>Collabaration</li>
+                <li>Problem-solving</li>
+                <li>Perservernace</li>
+                <li>Creativity</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style={{marginLeft: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginTop: 0, maxWidth: '500px' }}>
+          <h1 style={{color: '#000000', fontWeight: 650}}> Future Aspirations </h1>
+          <h3 style={{color:'#000000', textAlign: 'left',fontSize: '1.2rem', fontWeight: 200, marginTop: 0, marginRight:'-19rem'}}>
+            Aside from being a superhero, I have my own aspirations, specifically to become a software engineer.
+            In my younger years, I rarely considered how the world operates or the people behind its progress. 
+            Only now do I recognize that engineers are essential to humanity’s advancement, dedicating countless hours to making life more efficient and connected. 
+            It is because of their work that we are not just surviving, but thriving together.
+            As I grow older, I hope to contribute my strengths and build upon the foundations laid by the engineers before me for the betterment of our future.
+          </h3>
+        </div>
+      </div>
+
+
+
       {/* Contact Me section below the Hobbies section */}
-      <hr style={{border: '1px solid #000000', margin: '0'}} />
-      <div style={{ paddingTop: '5px',backgroundColor: '#5D5962'}}>
-          <h1 style={{fontSize: '3rem', textAlign:'left', color: '#FAFAFA', fontWeight: 300, paddingTop: '20px', paddingLeft: '60px'}}>Contact Me</h1>
-      <h3 style={{fontSize: '1.5rem', textAlign:'left', color: '#FAFAFA', fontWeight: 200, paddingLeft: '60px'}}> You can use any of these socials to reach me.  If you wanna coollabrate, inquire or just simply chat, I am open to talk! </h3>
-      <div id ="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', paddingTop: '20px', backgroundColor: '#5D5962'}}>
-          <a href="https://github.com/sajin1906"> <h3 style={{fontSize: '1.5rem', textAlign:'center', color: '#FAFAFA', fontWeight: 200, display: 'flex', alignItems: 'center', gap: '5px'}}>
-            <img src={Github} alt="Github" style={{ width: '30px', height: '30px', marginRight: '10px', marginTop: '10px' }} /> 
+      <div >
+          <h1 style={{fontSize: '3rem', textAlign:'left', color: '#000', fontWeight: 300, paddingTop: '20px', paddingLeft: '60px'}}>Contact Me</h1>
+      <h3 style={{fontSize: '1.5rem', textAlign:'left', color: '#000', fontWeight: 200, paddingLeft: '60px'}}> You can use any of these socials to reach me.  If you wanna coollabrate, inquire or just simply chat, I am open to talk! </h3>
+      <div id ="Contact" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem', paddingTop: '20px'}}>
+          <a href="https://github.com/sajin1906"> <h3 style={{fontSize: '1.5rem', textAlign:'center', color: '#000', fontWeight: 200, display: 'flex', alignItems: 'center', gap: '5px'}}>
+            <img src={Github} alt="Github" style={{ width: '30px', height: '30px', marginRight: '10px', marginTop: '10px', filter: 'invert(0)' }} /> 
             Follow on Github    
           </h3></a>
-          <a href="https://www.linkedin.com/in/sajin-somaskanthan-804089334/"> <h3 style={{fontSize: '1.5rem', textAlign:'center', color: '#FAFAFA', fontWeight: 200, display: 'flex', alignItems: 'center', gap: '5px'}}>
-            <img src={Linkedin} alt="Linkedin" style={{ width: '30px', height: '30px', marginRight: '10px', marginTop: '10px' }} /> 
+          <a href="https://www.linkedin.com/in/sajin-somaskanthan-804089334/"> <h3 style={{fontSize: '1.5rem', textAlign:'center', color: '#000', fontWeight: 200, display: 'flex', alignItems: 'center', gap: '5px'}}>
+            <img src={Linkedin} alt="Linkedin" style={{ width: '30px', height: '30px', marginRight: '10px', marginTop: '10px', filter: 'invert(0)' }} /> 
             Follow on LinkedIn
           </h3></a>
       </div>
