@@ -1,5 +1,5 @@
 import Message from './Message';
-import Sajin from './assets/Sajin.jpg'
+import Sajin from './assets/Sajin.JPG'
 import Logo from './assets/bat.png'
 import Basketball from './assets/basketball.jpg'
 import Coding from './assets/coding.jpg'
