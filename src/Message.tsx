@@ -6,7 +6,7 @@ function Message() {
                 learning about new things, that will potentioally mold our future.  I am also
                 a active person constantly playing sports and doing other activities in my free time.
                 My family and friends would descirbe me as a kind, outgoing, and enthusiasitic person. 
-                Lastly, I would describe myself as a hardworking and dedicated person, that is always 
+                Overall, I would describe myself as a hardworking and dedicated person, that is always 
                 looking for new ways to grow and improve.
         </h3> 
 }
